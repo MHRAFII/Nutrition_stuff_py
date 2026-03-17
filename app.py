@@ -39,6 +39,9 @@ MET_VALUES = {
     "jump_rope": 10.0
 }
 
+#tf you looking at here inside?
+#just use it and stay fucking happy mf
+
 
 def normalize_input(user_input):
     
