@@ -41,11 +41,7 @@ MET_VALUES = {
 
 
 def normalize_input(user_input):
-    """
-    Normalize user input:
-    - Convert to lowercase
-    - Replace spaces with underscores
-    """
+  
     return user_input.strip().lower().replace(" ", "_")
 
 
@@ -54,9 +50,7 @@ def calculate_calories(met, weight, time_hours):
 
 
 def get_valid_activity():
-    """
-    Keep asking until user enters a valid activity
-    """
+ 
     while True:
         raw_activity = input("\nEnter activity: ")
         activity = normalize_input(raw_activity)
@@ -70,9 +64,7 @@ def get_valid_activity():
 
 
 def get_valid_number(prompt):
-    """
-    Keep asking until user enters a valid number
-    """
+
     while True:
         try:
             value = float(input(prompt))
@@ -88,10 +80,10 @@ def main():
     for activity in MET_VALUES:
         print(f" - {activity}")
 
-    # 🔁 Activity loop
+
     raw_activity, activity = get_valid_activity()
 
-    # 🔁 Input loops for numbers
+ 
     weight = get_valid_number("Enter weight (kg): ")
     time_minutes = get_valid_number("Enter time (minutes): ")
     time_hours = time_minutes / 60
@@ -101,7 +93,7 @@ def main():
 
     print("\n==== Result ====")
     print(f"Original Input: {raw_activity}")
-    print(f"Normalized Input: {activity}")
+  #  print(f"Normalized Input: {activity}")
     print(f"MET: {met}")
     print(f"Calories burned: {calories:.2f} kcal\n")
 
